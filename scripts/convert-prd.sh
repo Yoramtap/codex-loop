@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PROMPT_FILE="$ROOT/codex/ralph.md"
+PROMPT_FILE="$ROOT/workflows/ralph.md"
 
 if [[ ! -f "$PROMPT_FILE" ]]; then
   echo "Missing $PROMPT_FILE"

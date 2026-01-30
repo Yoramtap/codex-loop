@@ -21,8 +21,8 @@ Ralph is an autonomous AI agent loop that runs Codex repeatedly until all PRD it
 
 - `ralph.sh` - The bash loop that spawns fresh AI instances (supports `--tool amp`, `--tool claude`, or `--tool codex`)
 - `CODEX.md` - Instructions given to each Codex instance
-- `codex/prd.md` - Codex PRD generator prompt
-- `codex/ralph.md` - Codex PRD → prd.json converter prompt
+- `workflows/prd.md` - Codex PRD generator prompt
+- `workflows/ralph.md` - Codex PRD → prd.json converter prompt
 - `scripts/prd.sh` - Run the Codex PRD generator
 - `scripts/convert-prd.sh` - Convert a PRD to prd.json with Codex
 - `prd.json.example` - Example PRD format
@@ -33,3 +33,4 @@ Ralph is an autonomous AI agent loop that runs Codex repeatedly until all PRD it
 - Memory persists via git history, `progress.txt`, and `prd.json`
 - Stories should be small enough to complete in one context window
 - Always update AGENTS.md with discovered patterns for future iterations
+- This Codex-only repo does not use `skills/`; PRDs are generated via `scripts/prd.sh`

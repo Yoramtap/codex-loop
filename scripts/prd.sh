@@ -2,18 +2,19 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PROMPT_FILE="$ROOT/codex/prd.md"
+PROMPT_FILE="$ROOT/workflows/prd.md"
 
 if [[ ! -f "$PROMPT_FILE" ]]; then
   echo "Missing $PROMPT_FILE"
   exit 1
 fi
 
-if [[ $# -gt 0 ]]; then
-  FEATURE_DESC="$*"
-  PROMPT="$(cat "$PROMPT_FILE")"$'\n\n'"Feature description:"$'\n'"$FEATURE_DESC"
-else
-  PROMPT="$(cat "$PROMPT_FILE")"
-fi
-
-codex -C "$ROOT" "$PROMPT"
+{
+  cat "$PROMPT_FILE"
+  if [[ $# -gt 0 ]]; then
+    FEATURE_DESC="$*"
+    echo ""
+    echo "Feature description:"
+    echo "$FEATURE_DESC"
+  fi
+} | codex exec --full-auto --cd "$ROOT" -
