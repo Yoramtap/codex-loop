@@ -4,9 +4,11 @@
 
 Ralph is an autonomous AI agent loop that runs AI coding tools like [Codex CLI](https://github.com/openai/codex) repeatedly until all PRD items are complete. Each iteration is a fresh instance with clean context. Memory persists via git history, `progress.txt`, and `prd.json`.
 
+This repo was made Codex-ready by Yoram Tap.
+
 Based on [Geoffrey Huntley's Ralph pattern](https://ghuntley.com/ralph/).
 
-[Read my in-depth article on how I use Ralph](https://x.com/ryancarson/status/2008548371712135632)
+[Read Ryan Carson's in-depth article on how to use Ralph](https://x.com/ryancarson/status/2008548371712135632)
 
 ## Prerequisites
 
