@@ -157,7 +157,12 @@ Ralph only works if there are feedback loops:
 
 ### Browser Verification for UI Stories
 
-Frontend stories must include "Verify in browser using dev-browser skill" in acceptance criteria. Ralph will use the dev-browser skill to navigate to the page, interact with the UI, and confirm changes work.
+Frontend stories must include "Verify in browser using agent-browser skill" in acceptance criteria. Ralph will use the agent-browser skill to navigate to the page, interact with the UI, and confirm changes work.
+
+Install the agent-browser skill:
+```bash
+npx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
+```
 
 ### Stop Condition
 

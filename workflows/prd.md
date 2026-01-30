@@ -54,7 +54,7 @@ Format:
 - [ ] Specific verifiable criterion
 - [ ] Another criterion
 - [ ] Typecheck passes
-- [ ] **[UI stories only]** Verify in browser using dev-browser skill
+- [ ] **[UI stories only]** Verify in browser using agent-browser skill
 ```
 
 ### 4. Functional Requirements

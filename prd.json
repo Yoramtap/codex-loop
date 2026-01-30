@@ -1,0 +1,53 @@
+{
+  "project": "Recipe Converter",
+  "branchName": "ralph/recipe-converter",
+  "description": "The Recipe Converter feature lets a user enter a recipe once and quickly generate a converted version with consistent ingredient amounts, units, and optional yield adjustments.",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Convert Units",
+      "description": "As a home cook, I want to convert a recipe between metric and US customary so that I can follow it with my local measuring tools",
+      "acceptanceCriteria": [
+        "User can select source and target unit systems (metric <-> US customary)",
+        "Ingredient quantities are converted using standard conversion factors",
+        "Ingredient text (name, preparation notes) remains unchanged",
+        "Converted recipe displays in a separate panel or view from the original",
+        "Typecheck passes",
+        "Verify in browser using agent-browser skill"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-002",
+      "title": "Scale Recipe Yield",
+      "description": "As a user, I want to scale a recipe by servings or a multiplier so that I can cook for different group sizes",
+      "acceptanceCriteria": [
+        "User can choose a multiplier (e.g., 0.5x, 2x) or target servings",
+        "Ingredient quantities update consistently across all items",
+        "Scaling can be applied before or after unit conversion without breaking results",
+        "Typecheck passes",
+        "Verify in browser using agent-browser skill"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "Copy/Export Converted Recipe",
+      "description": "As a user, I want to copy or export the converted recipe so that I can save or share it",
+      "acceptanceCriteria": [
+        "User can copy the converted recipe text to clipboard",
+        "Exported text includes title, ingredients, and instructions in order",
+        "Exported text reflects current conversion and scaling settings",
+        "Typecheck passes",
+        "Verify in browser using agent-browser skill"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}

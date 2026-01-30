@@ -41,7 +41,7 @@ You are an autonomous coding agent working on a software project.
 - All stories: `passes: false` and `notes: ""`.
 - branchName: kebab-case, prefixed with `ralph/`.
 - Always include "Typecheck passes" in acceptance criteria.
-- For UI stories, also include "Verify in browser using dev-browser skill".
+- For UI stories, also include "Verify in browser using agent-browser skill".
 - Split large stories into smaller, single-iteration chunks.
 
 ## Story Size Reminder
