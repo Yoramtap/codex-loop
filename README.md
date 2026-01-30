@@ -2,6 +2,25 @@
 
 ![Ralph](ralph.webp)
 
+## Quick Start
+
+1. Clone the repo
+```bash
+git clone https://github.com/Yoramtap/codex-loop.git
+cd codex-loop
+```
+
+2. Install prerequisites
+- Codex CLI (`npm install -g @openai/codex`) and authenticate
+- `jq` (`brew install jq` on macOS)
+
+3. Run the workflow
+```bash
+./scripts/prd.sh "Describe the feature you want"
+./scripts/convert-prd.sh tasks/prd-[feature-name].md
+./ralph.sh [max_iterations]
+```
+
 Ralph is an autonomous AI agent loop that runs AI coding tools like [Codex CLI](https://github.com/openai/codex) repeatedly until all PRD items are complete. Each iteration is a fresh instance with clean context. Memory persists via git history, `progress.txt`, and `prd.json`.
 
 This repo was made Codex-ready by Yoram Tap.
