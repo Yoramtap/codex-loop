@@ -1,35 +1,48 @@
 {
-  "project": "Build Loop Visualization (v1)",
-  "branchName": "ralph/build-loop-visualization",
-  "description": "Add a small animated Build Loop visualization to the home page that reinforces the site’s narrative: ship, note, repeat. The component should animate once when it scrolls into view.",
+  "project": "Night Vision Mode",
+  "branchName": "ralph/night-vision-mode",
+  "description": "Add a hidden \"Night Vision\" mode that toggles a green-tinted, night-vision theme when the user types \"night\" anywhere on the site, with a subtle effect that keeps the calm aesthetic and persists across reloads.",
   "userStories": [
     {
       "id": "US-001",
-      "title": "Build Loop Section",
-      "description": "As a visitor, I want a clear build-loop visualization so that the iterative nature of the blog is obvious",
+      "title": "Secret Trigger",
+      "description": "As a visitor, I want a hidden trigger so that I can unlock a special mode without UI clutter.",
       "acceptanceCriteria": [
-        "A new Build Loop section appears between the hero and the build notes cards",
-        "It lists: Code → Commit → Test → Write note → Ship",
-        "Animation plays once when the section scrolls into view",
+        "Typing \"night\" anywhere toggles Night Vision mode on/off.",
+        "Typing \"day\" anywhere toggles Night Vision mode off.",
+        "A subtle toast or text cue confirms the toggle every time.",
         "Typecheck passes",
         "Verify in browser using agent-browser skill"
       ],
       "priority": 1,
-      "passes": true,
+      "passes": false,
       "notes": ""
     },
     {
       "id": "US-002",
-      "title": "Mobile Behavior",
-      "description": "As a mobile visitor, I want the build loop to remain legible so that it’s usable on small screens",
+      "title": "Night Vision Theme",
+      "description": "As a visitor, I want the theme to change so that the mode feels distinct.",
       "acceptanceCriteria": [
-        "Steps stack cleanly on mobile with comfortable spacing",
-        "Animation timing remains subtle and not jarring on mobile",
+        "Night Vision updates background, text, and accent colors to a green-tinted palette.",
+        "The theme remains readable and calm.",
         "Typecheck passes",
         "Verify in browser using agent-browser skill"
       ],
       "priority": 2,
-      "passes": true,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "Persistence",
+      "description": "As a visitor, I want the mode to persist so that I don’t have to re-enter the trigger on reload.",
+      "acceptanceCriteria": [
+        "Mode state is stored in localStorage.",
+        "On page load, the mode restores if previously enabled.",
+        "Typecheck passes"
+      ],
+      "priority": 3,
+      "passes": false,
       "notes": ""
     }
   ]
