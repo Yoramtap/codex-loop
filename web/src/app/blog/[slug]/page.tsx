@@ -1,7 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import { posts } from "../posts";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return posts.map((post) => ({ slug: post.slug }));
+}
 
 type Params = {
   params: {
@@ -19,9 +26,9 @@ export default function BlogPostPage({ params }: Params) {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <a className={styles.backLink} href="/blog">
+        <Link className={styles.backLink} href="/blog">
           back to blog
-        </a>
+        </Link>
         <p className={styles.meta}>
           <span>{post.category}</span>
           <span>{post.author}</span>

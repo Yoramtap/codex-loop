@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 import { posts } from "./blog/posts";
 
@@ -25,9 +26,9 @@ export default function Home() {
               public.
             </p>
             <div className={styles.heroCtas}>
-              <a className={styles.primaryCta} href="/blog">
+              <Link className={styles.primaryCta} href="/blog">
                 Explore the blog
-              </a>
+              </Link>
               <a className={styles.secondaryCta} href="#featured">
                 Today&apos;s featured notes
               </a>
@@ -53,9 +54,9 @@ export default function Home() {
               <p className={styles.sectionKicker}>build notes</p>
               <h2>Fresh from the build log</h2>
             </div>
-            <a className={styles.sectionLink} href="/blog">
+            <Link className={styles.sectionLink} href="/blog">
               View all notes
-            </a>
+            </Link>
           </div>
           <div className={styles.cards}>
             {posts.slice(-3).reverse().map((post) => (
@@ -66,9 +67,9 @@ export default function Home() {
                 </p>
                 <h3>{post.title}</h3>
                 <p className={styles.cardExcerpt}>{post.summary}</p>
-                <a className={styles.cardLink} href={`/blog/${post.slug}`}>
+                <Link className={styles.cardLink} href={`/blog/${post.slug}`}>
                   Read the note
-                </a>
+                </Link>
               </article>
             ))}
           </div>

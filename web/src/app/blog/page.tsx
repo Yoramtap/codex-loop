@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 import { posts } from "./posts";
 
@@ -14,9 +15,9 @@ export default function BlogIndexPage() {
             calm, considered rhythm.
           </p>
         </div>
-        <a className={styles.backLink} href="/">
+        <Link className={styles.backLink} href="/">
           back to home
-        </a>
+        </Link>
       </header>
 
       <section className={styles.grid}>
@@ -32,9 +33,9 @@ export default function BlogIndexPage() {
             </p>
             <h2>{post.title}</h2>
             <p className={styles.excerpt}>{post.summary}</p>
-            <a className={styles.cardLink} href={`/blog/${post.slug}`}>
+            <Link className={styles.cardLink} href={`/blog/${post.slug}`}>
               read the note
-            </a>
+            </Link>
           </article>
         ))}
       </section>
