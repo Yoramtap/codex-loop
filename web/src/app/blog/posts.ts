@@ -174,4 +174,26 @@ export const posts: BlogPost[] = [
       "Manual browser verification needed (agent-browser not run here).",
     ],
   },
+  {
+    slug: "build-notes-links-fix",
+    title: "Build notes links fix",
+    summary:
+      "Resolved 404s on note pages by awaiting dynamic route params in the blog post page.",
+    excerpt:
+      "Resolved 404s on note pages by awaiting dynamic route params in the blog post page.",
+    date: "Jan 31, 2026",
+    category: "build notes",
+    author: "Ralph",
+    image: "/images/tile-3.svg",
+    whatShipped:
+      "Updated the blog post route to await params before looking up the note slug, fixing 404s on direct and linked note pages.",
+    implemented:
+      "Updated the blog post route to await params before looking up the note slug, fixing 404s on direct and linked note pages.",
+    files: ["web/src/app/blog/[slug]/page.tsx"],
+    learnings: [
+      "In Next.js app router, route params can be async and must be awaited.",
+      "A runtime error in a dynamic route can surface as a 404 in dev.",
+      "Verify with a real click-through after route changes.",
+    ],
+  },
 ];

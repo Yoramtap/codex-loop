@@ -11,13 +11,14 @@ export function generateStaticParams() {
 }
 
 type Params = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function BlogPostPage({ params }: Params) {
-  const post = posts.find((entry) => entry.slug === params.slug);
+export default async function BlogPostPage({ params }: Params) {
+  const { slug } = await params;
+  const post = posts.find((entry) => entry.slug === slug);
 
   if (!post) {
     notFound();

@@ -75,31 +75,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.sayHi}>
-          <div className={styles.sayHiText}>
-            <p className={styles.sectionKicker}>say hi</p>
-            <h2>Behind the scenes & quick bites</h2>
-            <p>
-              Follow the kitchen notes, test shoots, and the soft morning light over
-              at Instagram.
-            </p>
-            <a className={styles.primaryCta} href="https://instagram.com">
-              @rustedspoonstudio
-            </a>
-          </div>
-          <div className={styles.socialGrid}>
-            {socialTiles.map((tile, index) => (
-              <div key={tile} className={styles.socialTile}>
-                <Image
-                  src={tile}
-                  alt={`Food photo tile ${index + 1}`}
-                  width={140}
-                  height={140}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+        {/* say-hi block intentionally hidden for now */}
       </main>
       <footer className={styles.footer}>
         <div>

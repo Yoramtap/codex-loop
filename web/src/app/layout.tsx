@@ -14,7 +14,7 @@ const body = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Rusted Spoon Journal",
+  title: "The Build Notes Kitchen",
   description: "A calm build log chronicling the craft behind this blog.",
 };
 
