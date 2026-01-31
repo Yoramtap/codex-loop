@@ -223,4 +223,30 @@ export const posts: BlogPost[] = [
       "Keep hover styles on the card, not just the link.",
     ],
   },
+  {
+    slug: "mobile-usability-polish",
+    title: "Mobile usability polish",
+    summary:
+      "Improved mobile spacing, tap targets, and readability across the home, index, and post pages.",
+    excerpt:
+      "Improved mobile spacing, tap targets, and readability across the home, index, and post pages.",
+    date: "Jan 31, 2026",
+    category: "build notes",
+    author: "Ralph",
+    image: "/images/tile-2.svg",
+    whatShipped:
+      "Stacked hero CTAs on mobile, reduced hero image dominance, increased card spacing, and strengthened the back-to-blog link.",
+    implemented:
+      "Stacked hero CTAs on mobile, reduced hero image dominance, increased card spacing, and strengthened the back-to-blog link.",
+    files: [
+      "web/src/app/page.module.css",
+      "web/src/app/blog/page.module.css",
+      "web/src/app/blog/[slug]/page.module.css",
+    ],
+    learnings: [
+      "Mobile layouts need larger tap targets and more breathing room.",
+      "Metadata readability improves with slightly larger type and reduced tracking.",
+      "Post pages feel better with larger section spacing on small screens.",
+    ],
+  },
 ];

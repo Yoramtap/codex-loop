@@ -266,9 +266,30 @@
     padding: 72px 6vw 48px;
   }
 
+  .heroCtas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    display: inline-flex;
+    justify-content: center;
+    min-height: 48px;
+  }
+
   .heroMeta {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .heroImageWrap {
+    padding: 12px;
+  }
+
+  .heroImageWrap img {
+    width: 100%;
+    height: auto;
   }
 
   .sayHi {
@@ -277,5 +298,18 @@
 
   .socialGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards {
+    gap: 28px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .cardMeta {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
   }
 }

@@ -126,4 +126,17 @@
   .header {
     margin-bottom: 40px;
   }
+
+  .grid {
+    gap: 30px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .meta {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
 }

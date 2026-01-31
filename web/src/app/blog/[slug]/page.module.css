@@ -51,7 +51,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
   color: var(--ink-soft);
   line-height: 1.8;
 }
@@ -64,11 +64,26 @@
 .body ul {
   padding-left: 20px;
   display: grid;
-  gap: 8px;
+  gap: 10px;
 }
 
 @media (max-width: 600px) {
   .page {
     padding: 72px 6vw 56px;
+  }
+
+  .backLink {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+
+  .body {
+    gap: 24px;
+  }
+
+  .body ul {
+    gap: 12px;
   }
 }
