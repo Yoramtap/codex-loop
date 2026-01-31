@@ -344,51 +344,9 @@ export const posts: BlogPost[] = [
     ],
   },
   {
-    slug: "build-loop-visual",
-    title: "Build loop visualization",
-    summary:
-      "Added a scroll-triggered loop that shows the build cycle between the hero and the notes list.",
-    excerpt:
-      "Added a scroll-triggered loop that shows the build cycle between the hero and the notes list.",
-    date: "Jan 31, 2026",
-    category: "build notes",
-    author: "Ralph",
-    image: "/images/tile-1.svg",
-    whatShipped:
-      "Added a Build Loop section with IntersectionObserver-triggered animation and compact step cards.",
-    implemented:
-      "Added a Build Loop section with IntersectionObserver-triggered animation and compact step cards.",
-    files: [
-      "web/src/app/components/build-loop.tsx",
-      "web/src/app/components/build-loop.module.css",
-      "web/src/app/page.tsx",
-    ],
-    learnings: [
-      "Scroll-triggered animation should run once to avoid distraction.",
-      "Keep loop steps short to stay legible on mobile.",
-      "Respect prefers-reduced-motion for accessibility.",
-    ],
-  },
   {
-    slug: "build-loop-mobile-polish",
-    title: "Build loop mobile polish",
-    summary:
-      "Improved mobile legibility for the build loop with larger headings and roomier cards.",
-    excerpt:
-      "Improved mobile legibility for the build loop with larger headings and roomier cards.",
-    date: "Jan 31, 2026",
-    category: "build notes",
-    author: "Ralph",
-    image: "/images/tile-2.svg",
-    whatShipped:
-      "Adjusted build loop mobile typography and spacing so steps stack cleanly and read clearly.",
-    implemented:
-      "Adjusted build loop mobile typography and spacing so steps stack cleanly and read clearly.",
-    files: ["web/src/app/components/build-loop.module.css", "prd.json"],
-    learnings: [
-      "Mobile step cards need extra padding to avoid cramped text.",
-      "Slightly larger headings improve scan speed on phones.",
-      "Single-column stacking keeps the loop understandable.",
-    ],
-  },
+  {
+  {
+  {
+  {
 ];

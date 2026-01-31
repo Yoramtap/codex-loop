@@ -42,16 +42,16 @@ export default function BuildLoop() {
       <div className={styles.header}>
         <p className={styles.kicker}>build loop</p>
         <h2>Code. Commit. Test. Note. Ship.</h2>
-        <p className={styles.subtitle}>
-          A gentle loop that keeps the work moving and the notes honest.
-        </p>
       </div>
       <div className={styles.loop} aria-label="Build loop steps">
         {steps.map((step, index) => (
           <div
             key={step.title}
             className={styles.step}
-            style={{ animationDelay: `${index * 0.12}s` }}
+            style={{
+              animationDelay: `${index * 0.15}s`,
+              ["--pulse-delay" as string]: `${index * 0.15 + 0.2}s`,
+            }}
           >
             <div className={styles.icon} aria-hidden="true">
               <span />

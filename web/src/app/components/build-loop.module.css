@@ -38,6 +38,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 18px;
+  position: relative;
 }
 
 .step {
@@ -52,6 +53,7 @@
   transform: translateY(10px);
   animation: stepIn 0.5s ease forwards;
 }
+
 
 .icon {
   width: 36px;
@@ -69,6 +71,11 @@
   height: 12px;
   border-radius: 999px;
   background: var(--accent);
+}
+
+.visible .icon span {
+  animation: pulse 0.6s ease forwards;
+  animation-delay: var(--pulse-delay, 0.2s);
 }
 
 .step h3 {
@@ -92,11 +99,31 @@
   }
 }
 
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(185, 122, 82, 0.35);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(185, 122, 82, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(185, 122, 82, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .section,
   .step {
     opacity: 1;
     transform: none;
+    animation: none;
+  }
+
+  .visible .icon span {
     animation: none;
   }
 }
