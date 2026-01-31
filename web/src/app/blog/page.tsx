@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { posts } from "./posts";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function BlogIndexPage() {
   return (
     <div className={styles.page}>
@@ -24,7 +26,7 @@ export default function BlogIndexPage() {
         {[...posts].reverse().map((post) => (
           <article key={post.title} className={styles.card}>
             <div className={styles.thumbnail}>
-              <Image src={post.image} alt="" width={240} height={240} />
+              <Image src={`${basePath}${post.image}`} alt="" width={240} height={240} />
             </div>
             <p className={styles.meta}>
               <span>{post.category}</span>

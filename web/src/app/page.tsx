@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { posts } from "./blog/posts";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const socialTiles = [
   "/images/tile-1.svg",
   "/images/tile-2.svg",
@@ -10,7 +12,7 @@ const socialTiles = [
   "/images/tile-4.svg",
   "/images/tile-5.svg",
   "/images/tile-6.svg",
-];
+].map((src) => `${basePath}${src}`);
 
 export default function Home() {
   return (
@@ -39,7 +41,7 @@ export default function Home() {
           </div>
           <div className={styles.heroImageWrap}>
             <Image
-              src="/images/hero-food.svg"
+              src={`${basePath}/images/hero-food.svg`}
               alt="Rustic table with bread, herbs, and seasonal produce"
               width={560}
               height={620}

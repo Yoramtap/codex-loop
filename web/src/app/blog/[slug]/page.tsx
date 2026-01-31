@@ -10,6 +10,8 @@ export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 type Params = {
   params: Promise<{
     slug: string;
@@ -39,7 +41,7 @@ export default async function BlogPostPage({ params }: Params) {
       </header>
 
       <div className={styles.hero}>
-        <Image src={post.image} alt="" width={520} height={360} />
+        <Image src={`${basePath}${post.image}`} alt="" width={520} height={360} />
       </div>
 
       <section className={styles.body}>
