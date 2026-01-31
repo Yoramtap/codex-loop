@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { posts } from "./blog/posts";
+import BuildLoop from "./components/build-loop";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -38,6 +39,7 @@ export default function Home() {
           </div>
         </section>
 
+        <BuildLoop />
         <section className={styles.featured} id="featured">
           <div className={styles.sectionHeader}>
             <div>

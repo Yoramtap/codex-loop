@@ -95,3 +95,21 @@ Started: Sat Jan 31 12:40:44 CET 2026
   - Guard any non-fatal command with || true and a comment.
   - Review shell scripts when adding pipelines or subshells.
 ---
+
+## 2026-01-31 14:26 - US-001
+- What was implemented: Added a Build Loop section with scroll-triggered animation and compact step cards on the home page.
+- Files changed: web/src/app/components/build-loop.tsx, web/src/app/components/build-loop.module.css, web/src/app/page.tsx, prd.json
+- **Learnings for future iterations:**
+  - IntersectionObserver is a clean way to trigger one-time animations.
+  - Keep animation subtle and disable it with prefers-reduced-motion.
+  - Place narrative components between hero and notes for best visibility.
+---
+
+## 2026-01-31 14:31 - US-002
+- What was implemented: Tuned Build Loop mobile typography and spacing for clearer legibility.
+- Files changed: web/src/app/components/build-loop.module.css, prd.json
+- **Learnings for future iterations:**
+  - Mobile steps read better with slightly larger headings and more padding.
+  - Keep loop cards single-column with comfortable gaps.
+  - Small spacing tweaks can dramatically improve scannability.
+---
