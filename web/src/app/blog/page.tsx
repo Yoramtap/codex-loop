@@ -24,7 +24,7 @@ export default function BlogIndexPage() {
 
       <section className={styles.grid}>
         {[...posts].reverse().map((post) => (
-          <article key={post.title} className={styles.card}>
+          <Link key={post.title} className={styles.card} href={`/blog/${post.slug}`}>
             <div className={styles.thumbnail}>
               <Image src={`${basePath}${post.image}`} alt="" width={240} height={240} />
             </div>
@@ -35,10 +35,8 @@ export default function BlogIndexPage() {
             </p>
             <h2>{post.title}</h2>
             <p className={styles.excerpt}>{post.summary}</p>
-            <Link className={styles.cardLink} href={`/blog/${post.slug}`}>
-              read the note
-            </Link>
-          </article>
+            <span className={styles.cardLink}>read the note</span>
+          </Link>
         ))}
       </section>
 

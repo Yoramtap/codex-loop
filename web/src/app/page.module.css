@@ -155,6 +155,8 @@
   min-height: 220px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   animation: fadeUp 0.8s ease both;
+  position: relative;
+  cursor: pointer;
 }
 
 .card:hover {

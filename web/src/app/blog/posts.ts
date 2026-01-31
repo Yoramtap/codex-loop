@@ -196,4 +196,31 @@ export const posts: BlogPost[] = [
       "Verify with a real click-through after route changes.",
     ],
   },
+  {
+    slug: "build-notes-card-clicks",
+    title: "Build notes card clicks",
+    summary:
+      "Made the full cards clickable on the home and blog index views instead of just the tiny text link.",
+    excerpt:
+      "Made the full cards clickable on the home and blog index views instead of just the tiny text link.",
+    date: "Jan 31, 2026",
+    category: "build notes",
+    author: "Ralph",
+    image: "/images/tile-1.svg",
+    whatShipped:
+      "Added overlay links to the cards and adjusted layering so the entire card surface is clickable.",
+    implemented:
+      "Added overlay links to the cards and adjusted layering so the entire card surface is clickable.",
+    files: [
+      "web/src/app/page.tsx",
+      "web/src/app/blog/page.tsx",
+      "web/src/app/page.module.css",
+      "web/src/app/blog/page.module.css",
+    ],
+    learnings: [
+      "Full-card links improve usability when cards already hover like buttons.",
+      "Use overlay links plus z-index to keep text readable and clickable.",
+      "Keep hover styles on the card, not just the link.",
+    ],
+  },
 ];

@@ -59,6 +59,8 @@
   gap: 14px;
   min-height: 360px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  cursor: pointer;
 }
 
 .card:hover {

@@ -42,7 +42,7 @@ export default function Home() {
           <div className={styles.heroImageWrap}>
             <Image
               src={`${basePath}/images/hero-food.svg`}
-              alt="Rustic table with bread, herbs, and seasonal produce"
+              alt=""
               width={560}
               height={620}
               priority
@@ -62,17 +62,15 @@ export default function Home() {
           </div>
           <div className={styles.cards}>
             {posts.slice(-3).reverse().map((post) => (
-              <article key={post.title} className={styles.card}>
+              <Link key={post.title} className={styles.card} href={`/blog/${post.slug}`}>
                 <p className={styles.cardMeta}>
                   <span>{post.category}</span>
                   <span>{post.date}</span>
                 </p>
                 <h3>{post.title}</h3>
                 <p className={styles.cardExcerpt}>{post.summary}</p>
-                <Link className={styles.cardLink} href={`/blog/${post.slug}`}>
-                  Read the note
-                </Link>
-              </article>
+                <span className={styles.cardLink}>Read the note</span>
+              </Link>
             ))}
           </div>
         </section>
