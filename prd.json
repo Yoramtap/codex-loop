@@ -1,52 +1,48 @@
 {
-  "project": "Recipe Converter",
-  "branchName": "ralph/recipe-converter",
-  "description": "The Recipe Converter feature lets a user enter a recipe once and quickly generate a converted version with consistent ingredient amounts, units, and optional yield adjustments.",
+  "project": "Build Notes Restructure",
+  "branchName": "ralph/build-notes-restructure",
+  "description": "Refactor site copy and data to use Build Notes/Updates language throughout while keeping existing URLs unchanged.",
   "userStories": [
     {
       "id": "US-001",
-      "title": "Convert Units",
-      "description": "As a home cook, I want to convert a recipe between metric and US customary so that I can follow it with my local measuring tools",
+      "title": "Refactor data structure for build-log content",
+      "description": "As a developer, I want the post data model to align with build-log content so that future posts are consistent",
       "acceptanceCriteria": [
-        "User can select source and target unit systems (metric <-> US customary)",
-        "Ingredient quantities are converted using standard conversion factors",
-        "Ingredient text (name, preparation notes) remains unchanged",
-        "Converted recipe displays in a separate panel or view from the original",
-        "Typecheck passes",
-        "Verify in browser using agent-browser skill"
+        "Post data uses fields aligned to build notes (e.g., summary, what shipped, learnings)",
+        "Any sample content referencing recipes is replaced with build-log entries",
+        "Typecheck passes"
       ],
       "priority": 1,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
       "id": "US-002",
-      "title": "Scale Recipe Yield",
-      "description": "As a user, I want to scale a recipe by servings or a multiplier so that I can cook for different group sizes",
+      "title": "Update UI content to match build-note data",
+      "description": "As a visitor, I want the UI to show build-note content that matches the new data structure",
       "acceptanceCriteria": [
-        "User can choose a multiplier (e.g., 0.5x, 2x) or target servings",
-        "Ingredient quantities update consistently across all items",
-        "Scaling can be applied before or after unit conversion without breaking results",
+        "Home featured cards read from the updated build-note data",
+        "Blog index cards and blog post pages reflect updated build-note content and labels",
         "Typecheck passes",
         "Verify in browser using agent-browser skill"
       ],
       "priority": 2,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
       "id": "US-003",
-      "title": "Copy/Export Converted Recipe",
-      "description": "As a user, I want to copy or export the converted recipe so that I can save or share it",
+      "title": "Rename copy and labels to Build Notes",
+      "description": "As a visitor, I want the site to clearly communicate that it’s about building the blog so that the narrative feels coherent",
       "acceptanceCriteria": [
-        "User can copy the converted recipe text to clipboard",
-        "Exported text includes title, ingredients, and instructions in order",
-        "Exported text reflects current conversion and scaling settings",
+        "Home page headline, tagline, and section labels reference build notes rather than recipes",
+        "Blog index header and card CTA text reflect build notes or updates",
+        "Blog post page headings reference build notes instead of recipes",
         "Typecheck passes",
         "Verify in browser using agent-browser skill"
       ],
       "priority": 3,
-      "passes": false,
+      "passes": true,
       "notes": ""
     }
   ]

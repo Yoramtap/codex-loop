@@ -1,0 +1,61 @@
+# Ralph Progress Log
+Started: Sat Jan 31 12:40:44 CET 2026
+---
+
+## Codebase Patterns
+- Use CSS modules per page with shared tokens in web/src/app/globals.css.
+- Store placeholder gradient SVGs in web/public/images for easy image swapping.
+
+## 2026-01-31 12:51 - US-001
+- What was implemented: Replaced the default Next.js home page with a rustic, modern food-blog hero, featured posts, social "say hi" block, and footer.
+- Files changed: web/src/app/page.tsx, web/src/app/page.module.css, web/src/app/layout.tsx, web/src/app/globals.css, web/public/images/hero-food.svg, web/public/images/tile-1.svg, web/public/images/tile-2.svg, web/public/images/tile-3.svg, web/public/images/tile-4.svg, web/public/images/tile-5.svg, web/public/images/tile-6.svg, prd.json
+- **Learnings for future iterations:**
+  - Layout uses CSS modules per page and global tokens in globals.css.
+  - Placeholder imagery should use gradient SVGs in web/public/images for easy swap later.
+  - Manual browser verification needed (agent-browser not run here).
+---
+
+## 2026-01-31 12:59 - US-002
+- What was implemented: Added the blog index page with post cards, meta line, gradient thumbnails, and an “older posts” link.
+- Files changed: web/src/app/blog/page.tsx, web/src/app/blog/page.module.css, prd.json
+- **Learnings for future iterations:**
+  - Blog pages use local data arrays and CSS modules under web/src/app/blog.
+  - Use lowercase labels and muted palettes to match the editorial tone.
+  - Manual browser verification needed (agent-browser not run here).
+---
+
+## 2026-01-31 13:15 - US-003
+- What was implemented: Added blog post pages that render per-entry content with hero image, headings, paragraphs, and list sections, plus a back-to-blog link.
+- Files changed: web/src/app/blog/[slug]/page.tsx, web/src/app/blog/[slug]/page.module.css, web/src/app/blog/posts.ts, web/src/app/blog/page.tsx, prd.json
+- **Learnings for future iterations:**
+  - Use shared blog data in web/src/app/blog/posts.ts for both index and post pages.
+  - Blog post pages should include hero image and structured sections to keep the editorial rhythm.
+  - Manual browser verification needed (agent-browser not run here).
+---
+
+## 2026-01-31 13:22 - US-001
+- What was implemented: Added build-note specific fields (summary/what shipped) to post data and removed recipe language from sample entries.
+- Files changed: web/src/app/blog/posts.ts, prd.json
+- **Learnings for future iterations:**
+  - Keep backward-compatible fields during data model transitions to avoid breaking UI.
+  - Centralize build-note fields in posts.ts for consistency across pages.
+  - Manual browser verification needed (agent-browser not run here).
+---
+
+## 2026-01-31 13:26 - US-002
+- What was implemented: Updated home, blog index, and blog post pages to use build-note data fields and updated labels/CTAs to match the build-log content.
+- Files changed: web/src/app/page.tsx, web/src/app/blog/page.tsx, web/src/app/blog/[slug]/page.tsx, prd.json
+- **Learnings for future iterations:**
+  - UI copy should read directly from build-note fields like summary and whatShipped.
+  - Keep list and CTA labels consistent across home and index for clarity.
+  - Manual browser verification needed (agent-browser not run here).
+---
+
+## 2026-01-31 13:29 - US-003
+- What was implemented: Updated remaining copy and metadata to consistently reference build notes/build log language and removed recipe mentions.
+- Files changed: web/src/app/page.tsx, web/src/app/layout.tsx, prd.json
+- **Learnings for future iterations:**
+  - Search copy across layout metadata as well as page content.
+  - Use consistent build-log terminology in headers, CTAs, and descriptions.
+  - Manual browser verification needed (agent-browser not run here).
+---
