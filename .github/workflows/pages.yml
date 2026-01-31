@@ -28,9 +28,12 @@ jobs:
           cache-dependency-path: web/package-lock.json
       - name: Install dependencies
         working-directory: web
-        run: npm ci
+        run: npm install
       - name: Build static site
         working-directory: web
+        env:
+          NEXT_USE_WASM: "1"
+          NEXT_TELEMETRY_DISABLED: "1"
         run: npm run build
       - name: Configure Pages
         uses: actions/configure-pages@v5
