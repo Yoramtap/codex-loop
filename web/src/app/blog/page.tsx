@@ -13,8 +13,8 @@ export default function BlogIndexPage() {
           <p className={styles.kicker}>build notes</p>
           <h1>All notes, gentle and steady.</h1>
           <p className={styles.subtitle}>
-            Three recent build logs to warm the week, each with a small change and a
-            calm, considered rhythm.
+            Recent build logs to warm the week, each with a small change and a calm,
+            considered rhythm.
           </p>
         </div>
         <Link className={styles.backLink} href="/">

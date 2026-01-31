@@ -22,9 +22,6 @@ export default function Home() {
               <Link className={styles.primaryCta} href="/blog">
                 Explore the blog
               </Link>
-              <a className={styles.secondaryCta} href="#featured">
-                Today&apos;s featured notes
-              </a>
             </div>
             <div className={styles.heroMeta}>
               <span>new posts every build</span>
