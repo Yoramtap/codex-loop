@@ -59,3 +59,39 @@ Started: Sat Jan 31 12:40:44 CET 2026
   - Use consistent build-log terminology in headers, CTAs, and descriptions.
   - Manual browser verification needed (agent-browser not run here).
 ---
+
+## 2026-01-31 13:54 - US-001
+- What was implemented: Made typecheck a real gate, added lint/test scripts, and wired ralph.sh to run checks after each Codex iteration.
+- Files changed: scripts/typecheck.sh, scripts/lint.sh, scripts/test.sh, ralph.sh, prd.json
+- **Learnings for future iterations:**
+  - Avoid control characters in prd.json; sanitize apostrophes.
+  - Keep quality checks explicit and fail fast when dependencies are missing.
+  - Run typecheck/lint/test from repo root but scoped to web/.
+---
+
+## 2026-01-31 14:08 - US-002
+- What was implemented: Enforced clean working tree and branch correctness in ralph.sh, and enabled strict shell mode.
+- Files changed: ralph.sh, prd.json
+- **Learnings for future iterations:**
+  - Branch/dirty checks must run before starting iterations to avoid work on main.
+  - When branch creation fails, exit early with a clear error message.
+  - Keep safety checks above the main loop.
+---
+
+## 2026-01-31 14:14 - US-003
+- What was implemented: Added retry/abort logic for Codex failures so Ralph stops after repeated errors.
+- Files changed: ralph.sh, prd.json
+- **Learnings for future iterations:**
+  - Use PIPESTATUS to capture codex exit codes when piping to tee.
+  - Retry once on transient failures, then abort to avoid cascading errors.
+  - Keep error logs explicit and iteration-scoped.
+---
+
+## 2026-01-31 14:17 - US-004
+- What was implemented: Confirmed strict shell mode and ensured non-fatal commands are explicitly guarded.
+- Files changed: prd.json
+- **Learnings for future iterations:**
+  - Strict mode is a foundation; keep all scripts consistent with it.
+  - Guard any non-fatal command with || true and a comment.
+  - Review shell scripts when adding pipelines or subshells.
+---

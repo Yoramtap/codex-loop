@@ -5,15 +5,6 @@ import { posts } from "./blog/posts";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-const socialTiles = [
-  "/images/tile-1.svg",
-  "/images/tile-2.svg",
-  "/images/tile-3.svg",
-  "/images/tile-4.svg",
-  "/images/tile-5.svg",
-  "/images/tile-6.svg",
-].map((src) => `${basePath}${src}`);
-
 export default function Home() {
   return (
     <div className={styles.page}>
